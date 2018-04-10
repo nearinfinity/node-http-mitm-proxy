@@ -39,7 +39,7 @@
          /** - Setting this option will remove the content-length from the proxy to server request, forcing chunked encoding */
          forceChunkedRequest?: boolean;
 
-         httpsServerOptions : https.ServerOptions;
+         httpsServerOptions ?: https.ServerOptions;
      }
 
      export type IProxy = ICallbacks & {
