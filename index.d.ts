@@ -4,6 +4,7 @@
  import https = require("https");
  import net = require("net");
 
+ http.createServer()
 
  declare namespace HttpMitmProxy {
      export interface IProxyStatic {
@@ -37,6 +38,8 @@
          httpsPort?: number;
          /** - Setting this option will remove the content-length from the proxy to server request, forcing chunked encoding */
          forceChunkedRequest?: boolean;
+
+         httpsServerOptions : https.ServerOptions;
      }
 
      export type IProxy = ICallbacks & {
